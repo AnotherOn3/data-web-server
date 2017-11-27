@@ -2,7 +2,7 @@
   "name": "data-web-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/AnotherOn3/data-web-server/issues"
   },
-  "homepage": "https://github.com/AnotherOn3/data-web-server#readme"
+  "homepage": "https://github.com/AnotherOn3/data-web-server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.5"
+  }
 }
