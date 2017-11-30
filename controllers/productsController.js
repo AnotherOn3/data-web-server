@@ -17,9 +17,10 @@ var productsSchema = new mongoose.Schema({
   price: Number,
 });
 
+//Body parser is only needed for the POST method
 var Products = mongoose.model('Products', productsSchema);
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+var urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 module.exports = function(app) {
   app.get('/products', function(req, res) {
