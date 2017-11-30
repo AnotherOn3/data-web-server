@@ -27,4 +27,11 @@ module.exports = function(app) {
       res.json(data);
     });
   });
+  app.get('/stores/:id', function(req, res) {
+    //get data from mongoDB and pass it to the view
+    Stores.find({ id: req.params.id }, function(err, data) {
+      if (err) throw err;
+      res.json(data);
+    });
+  });
 };
