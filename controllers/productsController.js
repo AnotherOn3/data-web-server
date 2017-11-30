@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 //connect to a database
 mongoose.connect(
   'mongodb://admin:admin@ds121726.mlab.com:21726/another-one-db',
+  { useMongoClient: true },
 );
 
 // create a schema for our data
