@@ -17,7 +17,8 @@ var storesSchema = new mongoose.Schema({
 
 var Stores = mongoose.model('Stores', storesSchema);
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+//Body parser is only needed for the POST method
+var urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 module.exports = function(app) {
   app.get('/stores', function(req, res) {
